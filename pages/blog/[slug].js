@@ -5,8 +5,24 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { getAllSlugs, getEntryBySlug, renderMarkdown } from "@/lib/content";
 import { getBlogIcon } from "@/lib/icons";
 
+const proseClass = `prose-custom max-w-none font-sans text-ink/90 leading-loose
+  [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:text-pine [&_h2]:mt-12 [&_h2]:mb-4
+  [&_h3]:font-serif [&_h3]:text-xl [&_h3]:text-pine [&_h3]:mt-8 [&_h3]:mb-3
+  [&_p]:mb-5 [&_ul]:mb-5 [&_ol]:mb-5 [&_li]:mb-2 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5
+  [&_table]:w-full [&_table]:mb-6 [&_table]:text-sm [&_th]:border [&_th]:hairline [&_th]:bg-creamdark/50 [&_th]:p-2 [&_th]:text-left
+  [&_td]:border [&_td]:hairline [&_td]:p-2 [&_td]:align-top
+  [&_blockquote]:border-l-4 [&_blockquote]:border-terracotta/40 [&_blockquote]:pl-4 [&_blockquote]:text-ink/70
+  [&_hr]:my-10 [&_hr]:border-t [&_hr]:hairline`;
+
 export default function BlogPost({ post, contentHtml }) {
   const Icon = getBlogIcon(post.icon);
+  // frontmatter の cta.href にASPのリンクが入っている記事だけ、記事専用のPR枠を出す。
+  // 本文中の <!-- cta --> の位置にも同じPR枠を差し込む。
+  const hasCta = Boolean(post.cta?.href && post.cta.href !== "#");
+  const contentParts = hasCta
+    ? contentHtml.split("<!-- cta -->")
+    : [contentHtml.replaceAll("<!-- cta -->", "")];
+
   return (
     <>
       <Seo
@@ -44,21 +60,30 @@ export default function BlogPost({ post, contentHtml }) {
           {post.title}
         </h1>
 
-        <div
-          className="prose-custom max-w-none font-sans text-ink/90 leading-loose
-            [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:text-pine [&_h2]:mt-12 [&_h2]:mb-4
-            [&_p]:mb-5 [&_ul]:mb-5 [&_li]:mb-2 [&_ul]:list-disc [&_ul]:pl-5
-            [&_hr]:my-10 [&_hr]:border-t [&_hr]:hairline"
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-        />
+        {hasCta && (
+          <p className="text-xs text-ink/60 font-sans border hairline bg-creamdark/40 px-4 py-3 mb-10">
+            この記事には、アフィリエイト広告（PR）が含まれています。
+          </p>
+        )}
+
+        {contentParts.map((html, i) => (
+          <div key={i}>
+            <div className={proseClass} dangerouslySetInnerHTML={{ __html: html }} />
+            {hasCta && i < contentParts.length - 1 && <AffiliateCTA {...post.cta} show />}
+          </div>
+        ))}
 
         <AdSlot />
 
-        <AffiliateCTA
-          title="関西エリアの業者を比較する"
-          description="複数の業者にまとめて相談ができるサービスです。"
-          href="#"
-        />
+        {hasCta ? (
+          <AffiliateCTA {...post.cta} show />
+        ) : (
+          <AffiliateCTA
+            title="関西エリアの業者を比較する"
+            description="複数の業者にまとめて相談ができるサービスです。"
+            href="#"
+          />
+        )}
       </article>
     </>
   );

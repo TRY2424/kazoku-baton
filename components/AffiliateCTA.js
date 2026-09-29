@@ -13,8 +13,9 @@ export default function AffiliateCTA({
   description,
   buttonLabel = "無料で相談する",
   href = "#",
+  show = SHOW_AFFILIATE_CTA,
 }) {
-  if (!SHOW_AFFILIATE_CTA) return null;
+  if (!show) return null;
 
   return (
     <div className="my-10 border-2 border-terracotta bg-white p-6">

@@ -9,7 +9,9 @@ function getSlugs(dir) {
   return fs
     .readdirSync(full)
     .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
+    .map((f) => f.replace(/\.md$/, ""))
+    // draft: true の記事はサイトマップに載せない
+    .filter((s) => !/^draft:\s*true\s*$/m.test(fs.readFileSync(path.join(full, `${s}.md`), "utf-8").split(/^---\s*$/m)[1] || ""));
 }
 
 const staticPaths = ["/", "/areas", "/categories", "/blog", "/about", "/privacy", "/disclaimer"];
