@@ -4,12 +4,18 @@ import { ArrowRight } from "lucide-react";
  * アフィリエイトリンク用のCTAコンポーネント。
  * 「PR」ラベルは削除せず、リンク先URLは各ASPの発行するタグに差し替えてください。
  */
+
+// PR枠の表示スイッチ。再表示するときは true に戻してください。
+const SHOW_AFFILIATE_CTA = false;
+
 export default function AffiliateCTA({
   title,
   description,
   buttonLabel = "無料で相談する",
   href = "#",
 }) {
+  if (!SHOW_AFFILIATE_CTA) return null;
+
   return (
     <div className="my-10 border-2 border-terracotta bg-white p-6">
       <span className="inline-block text-[10px] tracking-wide2 text-white bg-terracotta px-2 py-0.5 mb-3 font-sans">

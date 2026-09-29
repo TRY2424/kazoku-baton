@@ -3,7 +3,13 @@
  * 審査通過後、pages/_document.js の <Head> 内にアドセンスの読み込みスクリプトを追加し、
  * 下記の <ins> タグをアドセンス管理画面で発行される広告ユニットのコードに置き換えてください。
  */
+
+// 広告枠の表示スイッチ。審査通過後に広告コードを入れたら true に戻してください。
+const SHOW_AD_SLOT = false;
+
 export default function AdSlot({ label = "広告" }) {
+  if (!SHOW_AD_SLOT) return null;
+
   return (
     <div className="my-10 border hairline bg-creamdark/50">
       <p className="text-[10px] text-ink/40 font-sans px-3 pt-2">{label}</p>
