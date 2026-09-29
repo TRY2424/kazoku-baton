@@ -60,9 +60,10 @@ export default function BlogPost({ post, contentHtml }) {
           {post.title}
         </h1>
 
+        {/* ステマ規制のため、小さくしすぎたり薄くしすぎたりしないこと */}
         {hasCta && (
-          <p className="text-xs text-ink/60 font-sans border hairline bg-creamdark/40 px-4 py-3 mb-10">
-            この記事には、アフィリエイト広告（PR）が含まれています。
+          <p className="text-xs text-ink/60 font-sans text-right -mt-6 mb-8">
+            この記事にはPRが含まれています
           </p>
         )}
 
