@@ -4,6 +4,7 @@ import AdSlot from "@/components/AdSlot";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getAllSlugs, getEntryBySlug, renderMarkdown } from "@/lib/content";
 import { getBlogIcon } from "@/lib/icons";
+import { AFFILIATE_LINKS } from "@/lib/affiliates";
 
 const proseClass = `prose-custom max-w-none font-sans text-ink/90 leading-loose
   [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:text-pine [&_h2]:mt-12 [&_h2]:mb-4
@@ -16,9 +17,13 @@ const proseClass = `prose-custom max-w-none font-sans text-ink/90 leading-loose
 
 export default function BlogPost({ post, contentHtml }) {
   const Icon = getBlogIcon(post.icon);
-  // frontmatter の cta.href にASPのリンクが入っている記事だけ、記事専用のPR枠を出す。
+  // frontmatter に cta(affiliate または href)がある記事だけ、記事専用のPR枠を出す。
   // 本文中の <!-- cta --> の位置にも同じPR枠を差し込む。
-  const hasCta = Boolean(post.cta?.href && post.cta.href !== "#");
+  const cta = post.cta && {
+    ...post.cta,
+    href: AFFILIATE_LINKS[post.cta.affiliate] || post.cta.href,
+  };
+  const hasCta = Boolean(cta?.href && cta.href !== "#");
   const contentParts = hasCta
     ? contentHtml.split("<!-- cta -->")
     : [contentHtml.replaceAll("<!-- cta -->", "")];
@@ -70,14 +75,14 @@ export default function BlogPost({ post, contentHtml }) {
         {contentParts.map((html, i) => (
           <div key={i}>
             <div className={proseClass} dangerouslySetInnerHTML={{ __html: html }} />
-            {hasCta && i < contentParts.length - 1 && <AffiliateCTA {...post.cta} show />}
+            {hasCta && i < contentParts.length - 1 && <AffiliateCTA {...cta} show />}
           </div>
         ))}
 
         <AdSlot />
 
         {hasCta ? (
-          <AffiliateCTA {...post.cta} show />
+          <AffiliateCTA {...cta} show />
         ) : (
           <AffiliateCTA
             title="関西エリアの業者を比較する"
