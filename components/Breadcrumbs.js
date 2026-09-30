@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const SITE_URL = "https://kazoku-baton.net"; // 実際のドメイン確定後に確認してください
+const SITE_URL = "https://www.kazoku-baton.net"; // 本番は www 付き(wwwなしはVercelでwwwへリダイレクト)
 
 export default function Breadcrumbs({ items }) {
   const jsonLd = {

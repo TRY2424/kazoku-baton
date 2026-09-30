@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const SITE_NAME = "関西 家族のバトン";
-const SITE_URL = "https://kazoku-baton.net"; // 実際のドメイン確定後に確認してください
+const SITE_URL = "https://www.kazoku-baton.net"; // 本番は www 付き(wwwなしはVercelでwwwへリダイレクト)
 
 export default function Seo({ title, description, path = "/", jsonLd = null }) {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;

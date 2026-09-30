@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const SITE_URL = "https://kazoku-baton.net"; // 実際のドメイン確定後に確認してください
+const SITE_URL = "https://www.kazoku-baton.net"; // 本番は www 付き(wwwなしはVercelでwwwへリダイレクト)
 
 function getSlugs(dir) {
   const full = path.join(process.cwd(), "content", dir);
