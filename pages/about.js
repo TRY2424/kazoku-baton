@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Seo from "@/components/Seo";
 
 export default function About() {
@@ -17,7 +18,10 @@ export default function About() {
           </div>
           <div>
             <dt className="text-ink/50 mb-1">連絡先</dt>
-            <dd>（お問い合わせフォームのリンクをここに記載）</dd>
+            <dd>
+              <Link href="/contact" className="text-terracottadark underline">お問い合わせフォーム</Link>
+              からご連絡ください。
+            </dd>
           </div>
           <div>
             <dt className="text-ink/50 mb-1">サイトの目的</dt>

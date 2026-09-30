@@ -14,6 +14,7 @@ export default function Footer() {
           <p className="mb-2 text-cream/90">サイトについて</p>
           <ul className="space-y-1 text-cream/70">
             <li><Link href="/about" className="hover:text-terracotta">運営者情報</Link></li>
+            <li><Link href="/contact" className="hover:text-terracotta">お問い合わせ</Link></li>
             <li><Link href="/privacy" className="hover:text-terracotta">プライバシーポリシー</Link></li>
             <li><Link href="/disclaimer" className="hover:text-terracotta">免責事項・広告掲載について</Link></li>
           </ul>

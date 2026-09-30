@@ -15,7 +15,7 @@ function getSlugs(dir) {
 }
 
 // エリアのページは noindex にしているため、サイトマップにも載せない
-const staticPaths = ["/", "/categories", "/blog", "/about", "/privacy", "/disclaimer"];
+const staticPaths = ["/", "/categories", "/blog", "/about", "/contact", "/privacy", "/disclaimer"];
 const categoryPaths = getSlugs("categories").map((s) => `/categories/${s}`);
 const blogPaths = getSlugs("blog").map((s) => `/blog/${s}`);
 
