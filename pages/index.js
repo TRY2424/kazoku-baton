@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Seo from "@/components/Seo";
 import CategoryCard from "@/components/CategoryCard";
+import HeroIllustration from "@/components/HeroIllustration";
 import AdSlot from "@/components/AdSlot";
 import AffiliateCTA from "@/components/AffiliateCTA";
 import { getAllEntries } from "@/lib/content";
@@ -23,38 +24,31 @@ export default function Home({ categories, posts }) {
 
       {/* Hero */}
       <section className="border-b hairline bg-creamdark/30">
-        <div className="max-w-content mx-auto px-6 py-16 sm:py-24">
-          <p className="font-sans text-sm text-terracottadark mb-4">
-            関西エリア（兵庫・大阪・京都・奈良・滋賀・和歌山）
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl text-pine leading-snug max-w-2xl">
-            親のこと、これからのこと。
-            <br />
-            次の世代へ、想いをつなぐ。
-          </h1>
-          <p className="mt-6 max-w-xl text-ink/70 font-sans leading-relaxed">
-            高齢者施設・介護から、生前整理、遺品整理、相続、実家の売却まで。むずかしい言葉はできるだけ使わず、はじめての方にも分かりやすい言葉で、実家じまいの一つひとつをお手伝いします。
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/categories"
-              className="inline-block border-2 border-terracotta text-terracottadark hover:bg-terracotta hover:text-cream transition-colors px-6 py-3 font-sans text-sm"
-            >
-              ジャンルから探す
-            </Link>
-            <Link
-              href="/blog"
-              className="inline-block border-2 border-pine text-pine hover:bg-pine hover:text-cream transition-colors px-6 py-3 font-sans text-sm"
-            >
-              コラムを読む
-            </Link>
+        <div className="max-w-content mx-auto px-6 py-6 sm:py-12 grid lg:grid-cols-2 gap-4 lg:gap-10 items-center">
+          <div>
+            <p className="font-sans text-xs sm:text-sm text-terracottadark mb-2 sm:mb-3">
+              関西エリア（兵庫・大阪・京都・奈良・滋賀・和歌山）
+            </p>
+            {/* 句の途中で折り返さないよう、句ごとに inline-block にする */}
+            <h1 className="font-serif text-2xl sm:text-4xl xl:text-5xl text-pine leading-snug">
+              <span className="inline-block">親のこと、</span>
+              <span className="inline-block">これからのこと。</span>
+              <br />
+              <span className="inline-block">次の世代へ、</span>
+              <span className="inline-block">想いをつなぐ。</span>
+            </h1>
+            <p className="mt-3 sm:mt-6 max-w-xl text-sm sm:text-base text-ink/70 font-sans leading-relaxed">
+              高齢者施設・介護から、生前整理、遺品整理、相続、実家の売却まで。むずかしい言葉はできるだけ使わず、はじめての方にも分かりやすい言葉で、実家じまいの一つひとつをお手伝いします。
+            </p>
           </div>
+          {/* スマホでは小さめにして、ジャンルのカードを早く見せる */}
+          <HeroIllustration className="w-full max-w-[220px] sm:max-w-sm lg:max-w-md mx-auto" />
         </div>
       </section>
 
       <div className="max-w-content mx-auto px-6">
         {/* Categories */}
-        <section className="py-16">
+        <section className="pt-10 pb-16">
           <div className="flex items-baseline justify-between mb-8">
             <h2 className="font-serif text-2xl text-pine flex items-center gap-2">
               <Heart size={22} className="text-terracotta" strokeWidth={1.75} />
