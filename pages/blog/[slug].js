@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Seo from "@/components/Seo";
 import AffiliateCTA from "@/components/AffiliateCTA";
 import AdSlot from "@/components/AdSlot";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { getAllSlugs, getEntryBySlug, renderMarkdown } from "@/lib/content";
+import { getAllSlugs, getEntryBySlug, getRelatedPosts, renderMarkdown } from "@/lib/content";
 import { getBlogIcon } from "@/lib/icons";
 import { AFFILIATE_LINKS } from "@/lib/affiliates";
 
@@ -15,7 +16,7 @@ const proseClass = `prose-custom max-w-none font-sans text-ink/90 leading-loose
   [&_blockquote]:border-l-4 [&_blockquote]:border-terracotta/40 [&_blockquote]:pl-4 [&_blockquote]:text-ink/70
   [&_hr]:my-10 [&_hr]:border-t [&_hr]:hairline`;
 
-export default function BlogPost({ post, contentHtml }) {
+export default function BlogPost({ post, contentHtml, related }) {
   const Icon = getBlogIcon(post.icon);
   // frontmatter に cta(affiliate または href)がある記事だけ、記事専用のPR枠を出す。
   // 本文中の <!-- cta --> の位置にも同じPR枠を差し込む。
@@ -94,6 +95,35 @@ export default function BlogPost({ post, contentHtml }) {
             href="#"
           />
         )}
+
+        {related.length > 0 && (
+          <section className="mt-16 pt-10 border-t hairline">
+            <h2 className="font-serif text-2xl text-pine mb-6">あわせて読みたい</h2>
+            <ul className="grid gap-4 sm:grid-cols-3">
+              {related.map((item) => {
+                const ItemIcon = getBlogIcon(item.icon);
+                return (
+                  <li key={item.slug}>
+                    <Link
+                      href={`/blog/${item.slug}`}
+                      className="block h-full border hairline bg-white/60 hover:bg-white p-5 transition-colors group"
+                    >
+                      <div className="w-9 h-9 rounded-full bg-terracotta/10 flex items-center justify-center mb-3">
+                        <ItemIcon size={17} className="text-terracottadark" strokeWidth={1.75} />
+                      </div>
+                      <h3 className="font-serif text-base text-pine group-hover:text-terracotta transition-colors leading-snug">
+                        {item.title}
+                      </h3>
+                      {item.summary && (
+                        <p className="text-xs text-ink/60 font-sans mt-2 leading-relaxed">{item.summary}</p>
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
       </article>
     </>
   );
@@ -111,5 +141,6 @@ export async function getStaticProps({ params }) {
   const post = getEntryBySlug("blog", params.slug);
   const contentHtml = await renderMarkdown(post.content);
   const { content, ...postMeta } = post;
-  return { props: { post: postMeta, contentHtml } };
+  const related = getRelatedPosts(post);
+  return { props: { post: postMeta, contentHtml, related } };
 }
