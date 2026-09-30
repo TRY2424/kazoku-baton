@@ -22,10 +22,10 @@ tags: ["相続", "はじめて"]
 <div class="steps timeline">
 <div class="step"><div class="step-no">7日以内</div><div><div class="step-head">死亡届の提出</div><div class="step-text">あわせて火葬許可をもらいます。葬儀社が手伝ってくれることが多いです。</div></div></div>
 <div class="step"><div class="step-no">早めに</div><div><div class="step-head">遺言書の確認・相続人と財産の調査</div><div class="step-text">遺言書があるか、誰が相続人か（戸籍で確認）、どんな財産や借金があるかを調べます。</div></div></div>
-<div class="step"><div class="step-no">3か月以内</div><div><div class="step-head">相続放棄・限定承認</div><div class="step-text">借金のほうが多い場合などは、家庭裁判所で手続きをします。何もしなければ、すべてを相続（単純承認）したことになります。</div></div></div>
+<div class="step"><div class="step-no">3か月以内</div><div><div class="step-head">相続放棄・限定承認</div><div class="step-text">借金のほうが多い場合などは、家庭裁判所で手続きをします（くわしくは<a href="/blog/souzoku-houki">相続放棄の記事</a>）。何もしなければ、すべてを相続（単純承認）したことになります。</div></div></div>
 <div class="step"><div class="step-no">4か月以内</div><div><div class="step-head">準確定申告</div><div class="step-text">亡くなった方に一定の所得があった場合、その年の所得税の申告をします。</div></div></div>
 <div class="step"><div class="step-no">10か月以内</div><div><div class="step-head">遺産分割協議・相続税の申告と納付</div><div class="step-text">誰が何を受け取るかを話し合って決めます。相続税がかかる場合は、この期限までに申告・納付します。</div></div></div>
-<div class="step"><div class="step-no">3年以内</div><div><div class="step-head">相続登記（不動産の名義変更）</div><div class="step-text">2024年4月から義務になりました。怠ると過料の対象になることがあります。</div></div></div>
+<div class="step"><div class="step-no">3年以内</div><div><div class="step-head">相続登記（不動産の名義変更）</div><div class="step-text">2024年4月から義務になりました。それより前に相続した不動産は2027年3月31日までが期限です。正当な理由なく怠ると、10万円以下の過料の対象になることがあります。</div></div></div>
 </div>
 <div class="fig-note">※ 遺産分割協議そのものに期限はありませんが、相続税の申告がある場合は10か月以内にまとめておくのが一般的です。</div>
 </div>
@@ -100,3 +100,14 @@ tags: ["相続", "はじめて"]
 - 分からないことは、内容に合った専門家へ早めに相談を
 
 > ※ この記事は2026年9月時点の情報をもとにしています。制度は法改正で変わることがあります。実際の手続きは、専門家にご確認ください。
+
+## この記事の出典
+
+- 法務省「[死亡届](https://www.moj.go.jp/ONLINE/FAMILYREGISTER/5-4.html)」
+- 裁判所「[相続の放棄の申述](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html)」
+- 国税庁 タックスアンサー「[No.2022 納税者が死亡したときの確定申告（準確定申告）](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2022.htm)」
+- 国税庁 タックスアンサー「[No.4205 相続税の申告と納税](https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4205.htm)」
+- 国税庁 タックスアンサー「[No.4152 相続税の計算](https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4152.htm)」（令和8年4月1日現在法令等）
+- 法務省「[相続登記の申請義務化に関するQ＆A](https://www.moj.go.jp/MINJI/minji05_00565.html)」（令和7年3月27日現在）
+
+（いずれも2026年9月に内容を確認しています）

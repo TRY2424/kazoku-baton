@@ -44,7 +44,7 @@ tags: ["介護", "介護保険", "はじめて"]
 <div class="box"><div class="box-head">家に来てもらう</div><div class="box-text">訪問介護（ヘルパー）、訪問看護、訪問入浴、訪問リハビリなど。住み慣れた家で暮らし続けたい方に。</div></div>
 <div class="box"><div class="box-head">施設に通う</div><div class="box-text">デイサービス（通所介護）、デイケア（通所リハビリ）。日中を施設で過ごし、食事や入浴、リハビリを受けます。</div></div>
 <div class="box"><div class="box-head">短期間泊まる</div><div class="box-text">ショートステイ。数日〜1週間ほど施設に泊まります。家族が休みたいときや、用事があるときに。</div></div>
-<div class="box accent"><div class="box-head">暮らしの環境を整える</div><div class="box-text">車いすや介護ベッドのレンタル（福祉用具貸与）、手すりの取り付けや段差解消（住宅改修）など。</div></div>
+<div class="box accent"><div class="box-head">暮らしの環境を整える</div><div class="box-text">車いすや介護ベッドのレンタル（福祉用具貸与）、手すりの取り付けや段差解消（住宅改修）など（くわしくは<a href="/blog/kaigo-jutaku-kaishu">住宅改修の記事</a>）。</div></div>
 </div>
 <div class="fig-note">※「通い」「泊まり」「訪問」を1つの事業所で組み合わせる「小規模多機能型居宅介護」というサービスもあります。</div>
 </div>
@@ -101,3 +101,12 @@ tags: ["介護", "介護保険", "はじめて"]
 - 足りない部分は、自治体のサービスや介護保険外サービスで補う
 
 > ※ この記事は2026年9月時点の情報をもとにしています。支給限度額や自己負担の割合は、制度改正で変わることがあります。くわしくは、お住まいの市区町村やケアマネジャーにご確認ください。
+
+## この記事の出典
+
+- 厚生労働省「介護サービス情報公表システム」[サービス利用までの流れ](https://www.kaigokensaku.mhlw.go.jp/commentary/flow.html)
+- 厚生労働省「介護サービス情報公表システム」[サービスにかかる利用料](https://www.kaigokensaku.mhlw.go.jp/commentary/fee.html)
+- 厚生労働省「介護サービス情報公表システム」[訪問介護（ホームヘルプ）](https://www.kaigokensaku.mhlw.go.jp/publish/group2.html)
+- 厚生労働省「[福祉用具・住宅改修](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000212398.html)」
+
+（いずれも2026年9月に内容を確認しています）

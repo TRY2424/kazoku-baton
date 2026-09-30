@@ -24,7 +24,7 @@ related: ["ihinseiri-timing", "souzoku-guide", "fudousan-baikyaku-guide"]
 <div class="fig-title">亡くなったあとの主な手続きと、遺品整理の時期</div>
 <div class="steps timeline">
 <div class="step"><div class="step-no">7日以内</div><div><div class="step-head">死亡届の提出・火葬</div><div class="step-text">多くの場合、葬儀社が手続きを手伝ってくれます。</div></div></div>
-<div class="step"><div class="step-no">14日以内</div><div><div class="step-head">年金・健康保険などの手続き</div><div class="step-text">年金の受給停止、健康保険証の返却、世帯主の変更など。</div></div></div>
+<div class="step"><div class="step-no">すみやかに</div><div><div class="step-head">年金・健康保険などの手続き</div><div class="step-text">年金の受給停止、健康保険証の返却、世帯主の変更など。期限は手続きごとに決まっているので、役所や年金事務所で確認しましょう。</div></div></div>
 <div class="step"><div class="step-no">49日前後</div><div><div class="step-head">遺品整理を始める方が多い時期</div><div class="step-text">親族が集まる四十九日の法要の前後に、形見分けをするご家族も多くいます。</div></div></div>
 <div class="step"><div class="step-no">3か月以内</div><div><div class="step-head">相続放棄の期限</div><div class="step-text">借金などが多い場合は、この期限までに家庭裁判所で手続きが必要です。</div></div></div>
 <div class="step"><div class="step-no">10か月以内</div><div><div class="step-head">相続税の申告・納付</div><div class="step-text">遺産が一定額をこえる場合のみ必要です。</div></div></div>
@@ -34,7 +34,7 @@ related: ["ihinseiri-timing", "souzoku-guide", "fudousan-baikyaku-guide"]
 
 時期の考え方は、[遺品整理はいつから始めればいい？](/blog/ihinseiri-timing)でもくわしく解説しています。
 
-> **相続放棄を考えている方は注意**：遺品を処分したり売ったりすると、相続を認めた（単純承認）とみなされ、相続放棄ができなくなるおそれがあります。放棄を考えている場合は、遺品に手をつける前に専門家に相談しましょう。
+> **相続放棄を考えている方は注意**：遺品を処分したり売ったりすると、相続を認めた（単純承認）とみなされ、相続放棄ができなくなるおそれがあります。放棄を考えている場合は、遺品に手をつける前に専門家に相談しましょう（手続きは[相続放棄の手続きと期限](/blog/souzoku-houki)）。
 
 ## 遺品整理の進め方
 
@@ -93,3 +93,11 @@ related: ["ihinseiri-timing", "souzoku-guide", "fudousan-baikyaku-guide"]
 - 相続放棄を考えているなら、遺品に手をつける前に専門家へ相談を
 
 > ※ この記事は2026年9月時点の情報をもとにしています。手続きの期限や費用は、状況によって異なります。
+
+## この記事の出典
+
+- 法務省「[死亡届](https://www.moj.go.jp/ONLINE/FAMILYREGISTER/5-4.html)」
+- 裁判所「[相続の放棄の申述](https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_13/index.html)」
+- 国税庁 タックスアンサー「[No.4205 相続税の申告と納税](https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4205.htm)」
+
+（いずれも2026年9月に内容を確認しています）

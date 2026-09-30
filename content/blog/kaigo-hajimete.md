@@ -25,3 +25,10 @@ tags: ["介護", "はじめて"]
 ---
 
 高齢者施設や介護サービスについての詳しい情報は、[高齢者施設のページ](/categories/koreisha-shisetsu)、[介護サービスのページ](/categories/kaigo-service)もあわせてご覧ください。
+
+## この記事の出典
+
+- 厚生労働省「[地域包括支援センターについて](https://www.mhlw.go.jp/content/12300000/001671185.pdf)」
+- 厚生労働省「介護サービス情報公表システム」[サービス利用までの流れ](https://www.kaigokensaku.mhlw.go.jp/commentary/flow.html)
+
+（いずれも2026年9月に内容を確認しています）
