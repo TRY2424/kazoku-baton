@@ -9,6 +9,8 @@ export default function AreasIndex({ areas }) {
         title="エリア一覧"
         description="関西エリア（兵庫・大阪・京都・奈良・滋賀・和歌山）を、都道府県ごとに分かりやすく紹介しています。"
         path="/areas"
+        // 中身が少ないため、充実させるまで検索エンジンに載せない
+        noindex
       />
       <div className="max-w-content mx-auto px-6 py-16">
         <h1 className="font-serif text-3xl text-pine mb-3">エリア一覧</h1>

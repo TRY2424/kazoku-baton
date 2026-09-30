@@ -14,12 +14,12 @@ function getSlugs(dir) {
     .filter((s) => !/^draft:\s*true\s*$/m.test(fs.readFileSync(path.join(full, `${s}.md`), "utf-8").split(/^---\s*$/m)[1] || ""));
 }
 
-const staticPaths = ["/", "/areas", "/categories", "/blog", "/about", "/privacy", "/disclaimer"];
-const areaPaths = getSlugs("areas").map((s) => `/areas/${s}`);
+// エリアのページは noindex にしているため、サイトマップにも載せない
+const staticPaths = ["/", "/categories", "/blog", "/about", "/privacy", "/disclaimer"];
 const categoryPaths = getSlugs("categories").map((s) => `/categories/${s}`);
 const blogPaths = getSlugs("blog").map((s) => `/blog/${s}`);
 
-const allPaths = [...staticPaths, ...areaPaths, ...categoryPaths, ...blogPaths];
+const allPaths = [...staticPaths, ...categoryPaths, ...blogPaths];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

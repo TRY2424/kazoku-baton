@@ -3,7 +3,7 @@ import Head from "next/head";
 const SITE_NAME = "関西 家族のバトン";
 const SITE_URL = "https://www.kazoku-baton.net"; // 本番は www 付き(wwwなしはVercelでwwwへリダイレクト)
 
-export default function Seo({ title, description, path = "/", jsonLd = null }) {
+export default function Seo({ title, description, path = "/", jsonLd = null, noindex = false }) {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const url = `${SITE_URL}${path}`;
 
@@ -12,6 +12,7 @@ export default function Seo({ title, description, path = "/", jsonLd = null }) {
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      {noindex && <meta name="robots" content="noindex, follow" />}
       <meta property="og:type" content="article" />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />

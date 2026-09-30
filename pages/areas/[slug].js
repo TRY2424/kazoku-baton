@@ -9,7 +9,8 @@ import { getAllSlugs, getEntryBySlug, renderMarkdown, getBusinessesByArea } from
 export default function AreaPage({ area, contentHtml, businesses }) {
   return (
     <>
-      <Seo title={area.title} description={area.description} path={`/areas/${area.slug}`} />
+      {/* 中身が少ないため、充実させるまで検索エンジンに載せない */}
+      <Seo title={area.title} description={area.description} path={`/areas/${area.slug}`} noindex />
       <article className="max-w-content mx-auto px-6 py-16">
         <Breadcrumbs
           items={[
