@@ -23,6 +23,126 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+/*
+ * 記事の中で使う図解の部品(Markdownの中にHTMLで書く)。
+ * 注意:HTMLの途中に空行を入れないこと(Markdownとして解釈されてしまう)。
+ *   .fig        図の枠。.fig-title で見出し、.fig-note で補足
+ *   .steps      流れ図(縦に番号と線でつながる)。.steps.timeline で期限のタイムライン
+ *   .boxes      分類カード(スマホ1列、PC2列/.three で3列)。.box.accent で色違い
+ */
+.fig {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(63, 93, 82, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+}
+.fig-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.05rem;
+  color: #3f5d52;
+}
+.fig-title::before {
+  content: "";
+  width: 4px;
+  height: 1.1em;
+  background: #c1694f;
+}
+.fig-note {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: rgba(58, 51, 44, 0.6);
+}
+.step {
+  position: relative;
+  display: flex;
+  gap: 0.9rem;
+  padding-bottom: 1.1rem;
+}
+.step:last-child {
+  padding-bottom: 0;
+}
+.step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: calc(1rem - 1px);
+  top: 2.3rem;
+  bottom: 0.2rem;
+  width: 2px;
+  background: rgba(193, 105, 79, 0.3);
+}
+.step-no {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background: #c1694f;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.timeline .step-no {
+  width: 5rem;
+  border-radius: 1rem;
+  background: #3f5d52;
+  font-size: 0.75rem;
+}
+.timeline .step:not(:last-child)::before {
+  left: calc(2.5rem - 1px);
+  background: rgba(63, 93, 82, 0.25);
+}
+.step-head {
+  margin-top: 0.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #3f5d52;
+}
+.step-text {
+  margin-top: 0.15rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: rgba(58, 51, 44, 0.75);
+}
+.boxes {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .boxes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .boxes.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.box {
+  padding: 1rem;
+  border: 1px solid rgba(63, 93, 82, 0.18);
+  border-top: 3px solid #3f5d52;
+  background: #fff;
+}
+.box.accent {
+  border-top-color: #c1694f;
+}
+.box-head {
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  color: #3f5d52;
+}
+.box-text {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(58, 51, 44, 0.75);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
