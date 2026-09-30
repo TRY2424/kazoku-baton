@@ -10,7 +10,7 @@ export default function Home({ categories, posts }) {
   return (
     <>
       <Seo
-        title="関西の実家じまい・終活 業者ガイド"
+        title="親と家族のこれからガイド｜関西の介護・相続・住まいの相談先"
         description="関西エリア（兵庫・大阪・京都・奈良・滋賀・和歌山）にしぼった、高齢者施設・介護・生前整理・遺品整理・相続・不動産売却の業者ガイドです。"
         jsonLd={{
           "@context": "https://schema.org",
