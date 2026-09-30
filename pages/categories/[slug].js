@@ -1,13 +1,14 @@
 import Seo from "@/components/Seo";
-import AreaCard from "@/components/AreaCard";
+import Link from "next/link";
+import { NotebookText } from "lucide-react";
 import AffiliateCTA from "@/components/AffiliateCTA";
 import AdSlot from "@/components/AdSlot";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessList from "@/components/BusinessList";
 import { getAllSlugs, getAllEntries, getEntryBySlug, renderMarkdown, getBusinessesByCategory } from "@/lib/content";
-import { getCategoryIcon } from "@/lib/icons";
+import { getCategoryIcon, getBlogIcon } from "@/lib/icons";
 
-export default function CategoryPage({ category, contentHtml, areas, businesses }) {
+export default function CategoryPage({ category, contentHtml, posts, businesses }) {
   const Icon = getCategoryIcon(category.icon);
   return (
     <>
@@ -41,18 +42,44 @@ export default function CategoryPage({ category, contentHtml, areas, businesses 
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
 
-        {/* ジャンル → エリアを選ぶ導線 */}
+        {/* ジャンル → コラムへの導線 */}
         <section className="mt-14 pt-10 border-t hairline">
-          <h2 className="font-serif text-2xl text-pine mb-2">
-            {category.title}を、エリアから探す
+          <h2 className="font-serif text-2xl text-pine mb-2 flex items-center gap-2">
+            <NotebookText size={22} className="text-terracotta" strokeWidth={1.75} />
+            {category.title}のコラム
           </h2>
-          <p className="text-sm text-ink/60 font-sans mb-8">
-            お住まいの都道府県を選ぶと、そのエリアの詳しい情報にうつれます。
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {areas.map((area) => (
-              <AreaCard key={area.slug} area={area} />
-            ))}
+          {posts.length > 0 ? (
+            <ul className="divide-y hairline border-t border-b hairline mt-6">
+              {posts.map((post) => {
+                const PostIcon = getBlogIcon(post.icon);
+                return (
+                  <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`} className="flex items-start gap-4 py-5 group">
+                      <div className="shrink-0 w-10 h-10 rounded-full bg-terracotta/10 flex items-center justify-center mt-0.5">
+                        <PostIcon size={18} className="text-terracottadark" strokeWidth={1.75} />
+                      </div>
+                      <div>
+                        <h3 className="font-serif text-lg text-pine group-hover:text-terracotta transition-colors leading-snug">
+                          {post.title}
+                        </h3>
+                        {post.summary && (
+                          <p className="text-sm text-ink/60 font-sans mt-1 leading-relaxed">{post.summary}</p>
+                        )}
+                      </div>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <p className="text-sm text-ink/60 font-sans mt-4">
+              このジャンルのコラムは準備中です。
+            </p>
+          )}
+          <div className="mt-6 text-right">
+            <Link href="/blog" className="text-sm text-terracottadark font-sans hover:underline">
+              コラムをすべて見る
+            </Link>
           </div>
         </section>
 
@@ -93,7 +120,9 @@ export async function getStaticProps({ params }) {
   const category = getEntryBySlug("categories", params.slug);
   const contentHtml = await renderMarkdown(category.content);
   const { content, ...categoryMeta } = category;
-  const areas = getAllEntries("areas").map(({ content, ...rest }) => rest);
+  const posts = getAllEntries("blog")
+    .filter((post) => (post.categories || []).includes(params.slug))
+    .map(({ slug, title, summary, icon }) => ({ slug, title, summary: summary || null, icon: icon || null }));
   const businesses = getBusinessesByCategory(params.slug);
-  return { props: { category: categoryMeta, contentHtml, areas, businesses } };
+  return { props: { category: categoryMeta, contentHtml, posts, businesses } };
 }

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Seo from "@/components/Seo";
-import AreaCard from "@/components/AreaCard";
 import CategoryCard from "@/components/CategoryCard";
 import AdSlot from "@/components/AdSlot";
 import AffiliateCTA from "@/components/AffiliateCTA";
 import { getAllEntries } from "@/lib/content";
-import { Heart, MapPin, NotebookText } from "lucide-react";
+import { Heart, NotebookText } from "lucide-react";
 
-export default function Home({ areas, categories, posts }) {
+export default function Home({ categories, posts }) {
   return (
     <>
       <Seo
@@ -44,10 +43,10 @@ export default function Home({ areas, categories, posts }) {
               ジャンルから探す
             </Link>
             <Link
-              href="/areas"
+              href="/blog"
               className="inline-block border-2 border-pine text-pine hover:bg-pine hover:text-cream transition-colors px-6 py-3 font-sans text-sm"
             >
-              エリアから探す
+              コラムを読む
             </Link>
           </div>
         </div>
@@ -68,24 +67,6 @@ export default function Home({ areas, categories, posts }) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {categories.map((category) => (
               <CategoryCard key={category.slug} category={category} />
-            ))}
-          </div>
-        </section>
-
-        {/* Areas */}
-        <section className="py-16 border-t hairline">
-          <div className="flex items-baseline justify-between mb-8">
-            <h2 className="font-serif text-2xl text-pine flex items-center gap-2">
-              <MapPin size={22} className="text-terracotta" strokeWidth={1.75} />
-              エリアから探す
-            </h2>
-            <Link href="/areas" className="text-sm text-terracottadark font-sans hover:underline">
-              すべて見る
-            </Link>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {areas.map((area) => (
-              <AreaCard key={area.slug} area={area} />
             ))}
           </div>
         </section>
@@ -134,11 +115,10 @@ export default function Home({ areas, categories, posts }) {
 }
 
 export async function getStaticProps() {
-  const areas = getAllEntries("areas").map(({ content, ...rest }) => rest);
   const categories = getAllEntries("categories").map(({ content, ...rest }) => rest);
   const posts = getAllEntries("blog")
     .map(({ content, ...rest }) => rest)
     .slice(0, 5);
 
-  return { props: { areas, categories, posts } };
+  return { props: { categories, posts } };
 }

@@ -18,9 +18,6 @@ export default function Header() {
           <Link href="/categories" className="hover:text-terracotta transition-colors">
             ジャンルから探す
           </Link>
-          <Link href="/areas" className="hover:text-terracotta transition-colors">
-            エリアから探す
-          </Link>
           <Link href="/blog" className="hover:text-terracotta transition-colors">
             コラム
           </Link>
