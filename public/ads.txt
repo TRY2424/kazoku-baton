@@ -1,3 +1,1 @@
-# GoogleアドセンスのPublisher IDが発行されたら、下記のような1行に置き換えてください。
-# 2つ目のサイトなので、既存のPublisher ID（ca-pub-5884237998308440）と同じ番号になるはずです。
-# google.com, pub-5884237998308440, DIRECT, f08c47fec0942fa0
+google.com, pub-5884237998308440, DIRECT, f08c47fec0942fa0
