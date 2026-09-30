@@ -13,6 +13,7 @@ export default function AffiliateCTA({
   description,
   buttonLabel = "無料で相談する",
   href = "#",
+  pixel,
   show = SHOW_AFFILIATE_CTA,
 }) {
   if (!show) return null;
@@ -35,6 +36,7 @@ export default function AffiliateCTA({
         {buttonLabel}
         <ArrowRight size={16} strokeWidth={2} />
       </a>
+      {pixel && <img src={pixel} width="1" height="1" alt="" className="border-0" />}
     </div>
   );
 }

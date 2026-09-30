@@ -19,9 +19,12 @@ export default function BlogPost({ post, contentHtml }) {
   const Icon = getBlogIcon(post.icon);
   // frontmatter に cta(affiliate または href)がある記事だけ、記事専用のPR枠を出す。
   // 本文中の <!-- cta --> の位置にも同じPR枠を差し込む。
+  const affiliate = AFFILIATE_LINKS[post.cta?.affiliate];
   const cta = post.cta && {
-    ...post.cta,
-    href: AFFILIATE_LINKS[post.cta.affiliate] || post.cta.href,
+    title: post.cta.title,
+    description: post.cta.description,
+    buttonLabel: post.cta.buttonLabel,
+    href: affiliate?.href || post.cta.href,
   };
   const hasCta = Boolean(cta?.href && cta.href !== "#");
   const contentParts = hasCta
@@ -82,7 +85,8 @@ export default function BlogPost({ post, contentHtml }) {
         <AdSlot />
 
         {hasCta ? (
-          <AffiliateCTA {...cta} show />
+          // 計測用の1x1画像は、二重カウントを防ぐため最後のPR枠にだけ付ける
+          <AffiliateCTA {...cta} pixel={affiliate?.pixel} show />
         ) : (
           <AffiliateCTA
             title="関西エリアの業者を比較する"
