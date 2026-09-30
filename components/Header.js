@@ -2,17 +2,8 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Heart } from "lucide-react";
+import { GENRES } from "@/lib/genres";
 
-// ヘッダーのジャンル帯。content/categories の order 順にそろえる。
-const GENRES = [
-  { slug: "koreisha-shisetsu", label: "高齢者施設" },
-  { slug: "kaigo-service", label: "介護サービス" },
-  { slug: "seizen-seiri", label: "生前整理" },
-  { slug: "ihin-seiri", label: "遺品整理" },
-  { slug: "souzoku", label: "相続" },
-  { slug: "fudousan-baikyaku", label: "不動産売却" },
-  { slug: "bochi-reien", label: "墓地・霊園" },
-];
 
 export default function Header() {
   const { asPath } = useRouter();

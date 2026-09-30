@@ -2,6 +2,7 @@ import Link from "next/link";
 import Seo from "@/components/Seo";
 import CategoryCard from "@/components/CategoryCard";
 import HeroIllustration from "@/components/HeroIllustration";
+import GenreLabel from "@/components/GenreLabel";
 import AdSlot from "@/components/AdSlot";
 import AffiliateCTA from "@/components/AffiliateCTA";
 import { getAllEntries } from "@/lib/content";
@@ -92,8 +93,9 @@ export default function Home({ categories, posts }) {
                   href={`/blog/${post.slug}`}
                   className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-5 group"
                 >
-                  <span className="text-xs text-ink/50 font-sans w-28 shrink-0">
-                    {post.date}
+                  <span className="flex items-center gap-2 sm:w-40 shrink-0">
+                    <GenreLabel post={post} />
+                    <span className="text-xs text-ink/50 font-sans">{post.date}</span>
                   </span>
                   <span className="font-serif text-lg text-pine group-hover:text-terracotta transition-colors">
                     {post.title}

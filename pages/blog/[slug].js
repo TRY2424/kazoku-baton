@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { getAllSlugs, getEntryBySlug, getRelatedPosts, renderMarkdown } from "@/lib/content";
 import { getBlogIcon } from "@/lib/icons";
 import { AFFILIATE_LINKS } from "@/lib/affiliates";
+import GenreLabel from "@/components/GenreLabel";
 
 const proseClass = `prose-custom max-w-none font-sans text-ink/90 leading-loose
   [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:text-pine [&_h2]:mt-12 [&_h2]:mb-4
@@ -63,6 +64,7 @@ export default function BlogPost({ post, contentHtml, related }) {
           <div className="shrink-0 w-11 h-11 rounded-full bg-terracotta/10 flex items-center justify-center">
             <Icon size={22} className="text-terracottadark" strokeWidth={1.75} />
           </div>
+          <GenreLabel post={post} />
           <p className="text-xs text-ink/50 font-sans">{post.date}</p>
         </div>
         <h1 className="font-serif text-3xl sm:text-4xl text-pine mb-10 leading-snug">
@@ -108,8 +110,11 @@ export default function BlogPost({ post, contentHtml, related }) {
                       href={`/blog/${item.slug}`}
                       className="block h-full border hairline bg-white/60 hover:bg-white p-5 transition-colors group"
                     >
-                      <div className="w-9 h-9 rounded-full bg-terracotta/10 flex items-center justify-center mb-3">
-                        <ItemIcon size={17} className="text-terracottadark" strokeWidth={1.75} />
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="w-9 h-9 rounded-full bg-terracotta/10 flex items-center justify-center">
+                          <ItemIcon size={17} className="text-terracottadark" strokeWidth={1.75} />
+                        </div>
+                        <GenreLabel post={item} />
                       </div>
                       <h3 className="font-serif text-base text-pine group-hover:text-terracotta transition-colors leading-snug">
                         {item.title}
