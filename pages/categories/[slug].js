@@ -59,6 +59,11 @@ export default function CategoryPage({ category, contentHtml, posts, businesses 
                         <PostIcon size={18} className="text-terracottadark" strokeWidth={1.75} />
                       </div>
                       <div>
+                        {post.featured && (
+                          <span className="inline-block text-[11px] font-sans text-terracottadark bg-terracotta/10 px-2 py-0.5 mb-1">
+                            はじめての方へ
+                          </span>
+                        )}
                         <h3 className="font-serif text-lg text-pine group-hover:text-terracotta transition-colors leading-snug">
                           {post.title}
                         </h3>
@@ -122,7 +127,15 @@ export async function getStaticProps({ params }) {
   const { content, ...categoryMeta } = category;
   const posts = getAllEntries("blog")
     .filter((post) => (post.categories || []).includes(params.slug))
-    .map(({ slug, title, summary, icon }) => ({ slug, title, summary: summary || null, icon: icon || null }));
+    // featured: true の入門記事を先頭に(それ以外は新しい順のまま)
+    .sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)))
+    .map(({ slug, title, summary, icon, featured }) => ({
+      slug,
+      title,
+      summary: summary || null,
+      icon: icon || null,
+      featured: Boolean(featured),
+    }));
   const businesses = getBusinessesByCategory(params.slug);
   return { props: { category: categoryMeta, contentHtml, posts, businesses } };
 }
