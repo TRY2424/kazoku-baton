@@ -7,7 +7,12 @@ featured: true
 description: "大切な方を亡くしたあとの遺品整理。いつ始めればいいか、どんな順番で進めるか、業者に頼むと費用はいくらか、気をつけたいことを、図と表で分かりやすく整理しました。"
 summary: "遺品整理を始める時期、進め方の手順、仕分けの方法、費用の目安と注意点を、図と表で整理します。"
 tags: ["遺品整理", "相続", "はじめて"]
-related: ["ihinseiri-timing", "souzoku-guide", "fudousan-baikyaku-guide"]
+cta:
+  title: "遺品整理の見積もりを「遺品整理110番」で相談する"
+  description: "全国対応の遺品整理の相談窓口。お住まいの地域と相談内容を伝えると、対応できる業者に見積もりを取り次いでもらえます。相談は無料です。"
+  buttonLabel: "無料で相談してみる"
+  affiliate: "ihin110"
+related: ["ihin-gyousha-erabi", "ihin-hiyou-osaeru", "ihin-chintai-taikyo"]
 ---
 
 大切な方を亡くしたあと、いつかは向き合うことになるのが**遺品整理**です。
@@ -76,6 +81,8 @@ related: ["ihinseiri-timing", "souzoku-guide", "fudousan-baikyaku-guide"]
 ※ 遺品の量、処分するものの種類、エレベーターの有無、作業日数などで大きく変わります。
 
 ## 業者選びのチェックポイント
+
+くわしくは[遺品整理業者の選び方](/blog/ihin-gyousha-erabi)、費用をおさえる方法は[遺品整理の費用をおさえるには](/blog/ihin-hiyou-osaeru)、賃貸住宅の場合は[賃貸に住んでいた親の遺品整理](/blog/ihin-chintai-taikyo)で解説しています。
 
 | チェックすること | 理由 |
 |---|---|
