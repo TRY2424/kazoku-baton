@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <p className="font-serif text-lg mb-2">関西 家族のバトン</p>
           <p className="text-cream/70 leading-relaxed">
-            関西エリアで、高齢者施設・介護・生前整理・遺品整理・相続・不動産売却・墓地霊園など、実家じまいに関わる業者選びのお手伝いをするサイトです。むずかしい言葉はできるだけ避けて、分かりやすい説明を心がけています。掲載している情報は記事を書いた時点のものなので、最新の内容は業者や役所に直接ご確認ください。
+            高齢になっていく親と、自分たち家族のこれからのために、介護・高齢者施設・生前整理・遺品整理・相続・実家の売却・お墓のことを、厚生労働省や法務省、裁判所などの公的な情報をもとに分かりやすくまとめている情報サイトです。掲載している情報は記事を書いた時点のものなので、最新の内容は役所や各事業者に直接ご確認ください。
           </p>
         </div>
         <div>
@@ -23,7 +23,6 @@ export default function Footer() {
           <p className="mb-2 text-cream/90">コンテンツ</p>
           <ul className="space-y-1 text-cream/70">
             <li><Link href="/categories" className="hover:text-terracotta">ジャンル一覧</Link></li>
-            <li><Link href="/areas" className="hover:text-terracotta">エリア一覧</Link></li>
             <li><Link href="/blog" className="hover:text-terracotta">コラム一覧</Link></li>
           </ul>
         </div>
