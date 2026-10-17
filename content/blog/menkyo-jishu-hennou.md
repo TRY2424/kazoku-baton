@@ -76,6 +76,7 @@ related: ["koureisha-menkyo-koushin", "oya-kuruma-tebanasu", "tsuin-tsukisoi"]
 
 - 返納するか迷っている → [75歳以上の免許更新と、サポカー限定免許](/blog/koureisha-menkyo-koushin)
 - 車をどうするか → [親の車を手放すときの手続き](/blog/oya-kuruma-tebanasu)
+- 返納後の移動手段 → [敬老パス・福祉有償運送・通院介助](/blog/henno-go-idou)
 - 通院の足が心配 → [親の通院の付き添いができないときは？](/blog/tsuin-tsukisoi)
 
 運転について迷ったときは、警察の安全運転相談（**#8080**）にも相談できます。
