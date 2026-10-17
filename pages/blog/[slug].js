@@ -39,12 +39,14 @@ export default function BlogPost({ post, contentHtml, related }) {
         title={post.title}
         description={post.description}
         path={`/blog/${post.slug}`}
+        image={`/images/eyecatch/${post.slug}.png`}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Article",
           headline: post.title,
           description: post.description,
           datePublished: post.date,
+          image: `https://www.kazoku-baton.net/images/eyecatch/${post.slug}.png`,
           inLanguage: "ja",
           publisher: {
             "@type": "Organization",
@@ -67,9 +69,16 @@ export default function BlogPost({ post, contentHtml, related }) {
           <GenreLabel post={post} />
           <p className="text-xs text-ink/50 font-sans">{post.date}</p>
         </div>
-        <h1 className="font-serif text-3xl sm:text-4xl text-pine mb-10 leading-snug">
+        <h1 className="font-serif text-3xl sm:text-4xl text-pine mb-8 leading-snug">
           {post.title}
         </h1>
+        <img
+          src={`/images/eyecatch/${post.slug}.png`}
+          alt=""
+          width={1200}
+          height={630}
+          className="w-full h-auto rounded-2xl mb-10"
+        />
 
         {/* ステマ規制のため、小さくしすぎたり薄くしすぎたりしないこと */}
         {hasCta && (
@@ -103,17 +112,21 @@ export default function BlogPost({ post, contentHtml, related }) {
             <h2 className="font-serif text-2xl text-pine mb-6">あわせて読みたい</h2>
             <ul className="grid gap-4 sm:grid-cols-3">
               {related.map((item) => {
-                const ItemIcon = getBlogIcon(item.icon);
                 return (
                   <li key={item.slug}>
                     <Link
                       href={`/blog/${item.slug}`}
                       className="block h-full border hairline bg-white/60 hover:bg-white p-5 transition-colors group"
                     >
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-9 h-9 rounded-full bg-terracotta/10 flex items-center justify-center">
-                          <ItemIcon size={17} className="text-terracottadark" strokeWidth={1.75} />
-                        </div>
+                      <img
+                        src={`/images/eyecatch/${item.slug}.png`}
+                        alt=""
+                        width={1200}
+                        height={630}
+                        loading="lazy"
+                        className="w-full h-auto rounded-lg mb-3"
+                      />
+                      <div className="mb-2">
                         <GenreLabel post={item} />
                       </div>
                       <h3 className="font-serif text-base text-pine group-hover:text-terracotta transition-colors leading-snug">

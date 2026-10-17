@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Seo from "@/components/Seo";
 import GenreLabel from "@/components/GenreLabel";
 import { getAllEntries } from "@/lib/content";
-import { getBlogIcon } from "@/lib/icons";
+
 import { GENRES } from "@/lib/genres";
 
 export default function BlogIndex({ posts }) {
@@ -58,16 +58,20 @@ export default function BlogIndex({ posts }) {
 
         <ul className="divide-y hairline border-t border-b hairline">
           {visible.map((post) => {
-            const Icon = getBlogIcon(post.icon);
             return (
               <li key={post.slug}>
                 <Link
                   href={`/blog/${post.slug}`}
                   className="flex items-start gap-4 py-6 group"
                 >
-                  <div className="shrink-0 w-10 h-10 rounded-full bg-terracotta/10 flex items-center justify-center mt-1">
-                    <Icon size={18} className="text-terracottadark" strokeWidth={1.75} />
-                  </div>
+                  <img
+                    src={`/images/eyecatch/${post.slug}.png`}
+                    alt=""
+                    width={1200}
+                    height={630}
+                    loading="lazy"
+                    className="shrink-0 w-28 sm:w-44 h-auto rounded-lg mt-1"
+                  />
                   <div>
                     <div className="flex items-center gap-2">
                       <GenreLabel post={post} />

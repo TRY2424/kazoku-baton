@@ -6,7 +6,7 @@ import AdSlot from "@/components/AdSlot";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessList from "@/components/BusinessList";
 import { getAllSlugs, getAllEntries, getEntryBySlug, renderMarkdown, getBusinessesByCategory } from "@/lib/content";
-import { getCategoryIcon, getBlogIcon } from "@/lib/icons";
+import { getCategoryIcon } from "@/lib/icons";
 
 export default function CategoryPage({ category, contentHtml, posts, businesses }) {
   const Icon = getCategoryIcon(category.icon);
@@ -51,13 +51,17 @@ export default function CategoryPage({ category, contentHtml, posts, businesses 
           {posts.length > 0 ? (
             <ul className="divide-y hairline border-t border-b hairline mt-6">
               {posts.map((post) => {
-                const PostIcon = getBlogIcon(post.icon);
                 return (
                   <li key={post.slug}>
                     <Link href={`/blog/${post.slug}`} className="flex items-start gap-4 py-5 group">
-                      <div className="shrink-0 w-10 h-10 rounded-full bg-terracotta/10 flex items-center justify-center mt-0.5">
-                        <PostIcon size={18} className="text-terracottadark" strokeWidth={1.75} />
-                      </div>
+                      <img
+                        src={`/images/eyecatch/${post.slug}.png`}
+                        alt=""
+                        width={1200}
+                        height={630}
+                        loading="lazy"
+                        className="shrink-0 w-28 sm:w-40 h-auto rounded-lg mt-0.5"
+                      />
                       <div>
                         {post.featured && (
                           <span className="inline-block text-[11px] font-sans text-terracottadark bg-terracotta/10 px-2 py-0.5 mb-1">
