@@ -70,6 +70,8 @@ related: ["koureisha-menkyo-koushin", "oya-kuruma-tebanasu", "tsuin-tsukisoi"]
 
 市や町が独自の支援をしているところもあります。お住まいの市町の窓口にも確認してみてください。
 
+> **西宮市にお住まいの方へ**：西宮市に住む人の返納の手続き（警察署と阪神更新センターの違い）や、70歳以上が使える西宮市の「高齢者バス運賃助成」は、姉妹サイト「西宮・芦屋くらしガイド」の[西宮市で親が運転免許を返納したら](https://www.nishi-ashi-kurashi.com/blog/menkyo-hennou-chuushajou)にまとめています。
+
 ## 返納を考えるときに
 
 返納したあとの通院や買い物の手段も、あわせて考えておくことが大切です。
