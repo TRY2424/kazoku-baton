@@ -46,6 +46,7 @@ export default function BlogPost({ post, contentHtml, related }) {
           headline: post.title,
           description: post.description,
           datePublished: post.date,
+          dateModified: post.updated || post.date,
           image: `https://www.kazoku-baton.net/images/eyecatch/${post.slug}.png`,
           inLanguage: "ja",
           publisher: {
@@ -67,7 +68,7 @@ export default function BlogPost({ post, contentHtml, related }) {
             <Icon size={22} className="text-terracottadark" strokeWidth={1.75} />
           </div>
           <GenreLabel post={post} />
-          <p className="text-xs text-ink/50 font-sans">{post.date}</p>
+          <p className="text-xs text-ink/50 font-sans">{post.date}{post.updated && post.updated !== post.date ? `（${post.updated} 更新）` : ""}</p>
         </div>
         <h1 className="font-serif text-3xl sm:text-4xl text-pine mb-8 leading-snug">
           {post.title}
