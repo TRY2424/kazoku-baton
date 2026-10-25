@@ -19,7 +19,7 @@ related: ["hakajimai-sankotsu", "souzoku-toki-baikyaku"]
 |---|---|---|
 | 10日・14日以内 | 年金の死亡届（厚生年金は10日、国民年金は14日以内） | [親が亡くなったあとの役所・年金の手続き](/blog/oya-shibougo-yakusho-nenkin) |
 | 3か月以内 | 相続放棄（自分が相続人になったことを知ったときから） | [相続放棄の手続きと期限](/blog/souzoku-houki) |
-| 4か月以内 | 準確定申告（亡くなった方に一定の所得があった場合） | [相続の流れと期限](/blog/souzoku-guide) |
+| 4か月以内 | 準確定申告（亡くなった方に一定の所得があった場合） | [親が亡くなったあとの準確定申告](/blog/jun-kakutei-shinkoku) |
 | 10か月以内 | 相続税の申告・納付（相続税がかかる場合） | [相続の流れと期限](/blog/souzoku-guide) |
 | 3年以内 | 相続登記（不動産を相続したことを知った日から） | [実家を売る前に、相続登記の確認を](/blog/souzoku-toki-baikyaku) |
 

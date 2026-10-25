@@ -23,7 +23,7 @@ tags: ["相続", "はじめて"]
 <div class="step"><div class="step-no">7日以内</div><div><div class="step-head">死亡届の提出</div><div class="step-text">あわせて火葬許可をもらいます。葬儀社が手伝ってくれることが多いです。</div></div></div>
 <div class="step"><div class="step-no">早めに</div><div><div class="step-head">遺言書の確認・相続人と財産の調査</div><div class="step-text">遺言書があるか、誰が相続人か（戸籍で確認）、どんな財産や借金があるかを調べます。</div></div></div>
 <div class="step"><div class="step-no">3か月以内</div><div><div class="step-head">相続放棄・限定承認</div><div class="step-text">借金のほうが多い場合などは、家庭裁判所で手続きをします（くわしくは<a href="/blog/souzoku-houki">相続放棄の記事</a>）。何もしなければ、すべてを相続（単純承認）したことになります。</div></div></div>
-<div class="step"><div class="step-no">4か月以内</div><div><div class="step-head">準確定申告</div><div class="step-text">亡くなった方に一定の所得があった場合、その年の所得税の申告をします。</div></div></div>
+<div class="step"><div class="step-no">4か月以内</div><div><div class="step-head">準確定申告</div><div class="step-text">亡くなった方に一定の所得があった場合、その年の所得税の申告をします（<a href="/blog/jun-kakutei-shinkoku">くわしくはこちら</a>）。</div></div></div>
 <div class="step"><div class="step-no">10か月以内</div><div><div class="step-head">遺産分割協議・相続税の申告と納付</div><div class="step-text">誰が何を受け取るかを話し合って決めます。相続税がかかる場合は、この期限までに申告・納付します。</div></div></div>
 <div class="step"><div class="step-no">3年以内</div><div><div class="step-head">相続登記（不動産の名義変更）</div><div class="step-text">2024年4月から義務になりました。それより前に相続した不動産は2027年3月31日までが期限です。正当な理由なく怠ると、10万円以下の過料の対象になることがあります。</div></div></div>
 </div>
