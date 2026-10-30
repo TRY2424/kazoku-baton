@@ -150,4 +150,4 @@ related: ["koureisha-menkyo-koushin", "koureisha-unten-toukei", "menkyo-jishu-he
 - 大阪府警察「[運転免許更新手続（75歳以上の方）](https://www.police.pref.osaka.lg.jp/tetsuduki/untenmenkyo/over70/3716.html)」
 - 大阪府警察「[高齢者講習・認知機能検査・運転技能検査の予約状況一覧表](https://www.police.pref.osaka.lg.jp/tetsuduki/untenmenkyo/13571.html)」（2026年9月30日時点）
 
-（いずれも2026年10月に内容を確認しています。兵庫県など他の府県では、手続きや手数料が異なる場合があります）
+（いずれも2026年10月に内容を確認しています。兵庫県など他の府県では、手続きや手数料が異なる場合があります。兵庫県の空き状況は[兵庫県の高齢者講習の空き状況](/blog/koureisha-koushuu-hyogo)にまとめています）
