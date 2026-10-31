@@ -138,6 +138,9 @@ related: ["koureisha-menkyo-koushin", "koureisha-unten-toukei", "menkyo-jishu-he
 - 代表 06-6908-9121
 - 受付：平日 午前9時〜午後5時
 
+
+> **返納したら、親の車はどうする？**　乗らなくなった車にも、自動車税や保険がかかり続けます。売る・譲る・廃車の選び方は[親の車を手放すときの手続き](/blog/oya-kuruma-tebanasu)、売るときのトラブルの防ぎ方は[親の車を売る前に知っておきたい買取トラブル](/blog/oya-kuruma-baikyaku-trouble)にまとめています。
+
 ## まとめ
 
 - 通知は免許の満了日の約190日前に届く。届いたらすぐに予約する

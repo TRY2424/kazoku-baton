@@ -138,6 +138,9 @@ related: ["koureisha-koushuu-yoyaku", "koureisha-menkyo-koushin", "menkyo-jishu-
 
 大阪府の空き状況と予約の流れは[高齢者講習の空き状況（大阪）と予約](/blog/koureisha-koushuu-yoyaku)、75歳以上の更新の流れは[75歳以上の免許更新](/blog/koureisha-menkyo-koushin)、返納するときは[親の運転免許の自主返納](/blog/menkyo-jishu-hennou)にまとめています。
 
+
+> **返納したら、親の車はどうする？**　乗らなくなった車にも、自動車税や保険がかかり続けます。売る・譲る・廃車の選び方は[親の車を手放すときの手続き](/blog/oya-kuruma-tebanasu)、売るときのトラブルの防ぎ方は[親の車を売る前に知っておきたい買取トラブル](/blog/oya-kuruma-baikyaku-trouble)にまとめています。
+
 ## まとめ
 
 - 兵庫県の高齢者講習は、**教習所に直接電話で予約**。更新期間の満了日の**6か月前から**受けられる

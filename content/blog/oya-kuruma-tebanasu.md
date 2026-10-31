@@ -6,7 +6,7 @@ categories: ["oya-kuruma", "seizen-seiri"]
 description: "免許を返納した親の車を手放すときの選択肢（売る・家族に譲る・廃車にする）と、名義が親のままの車の手続き、車検証の「所有者」の確認、普通車の自動車税は廃車で月割還付されるが軽自動車税にはない点を、大阪府や国土交通省などの公式情報で整理しました。"
 summary: "売る・譲る・廃車の選び方、名義が親の車の手続き、自動車税の月割還付（普通車のみ）を公式情報で整理します。"
 tags: ["親の車", "免許返納", "廃車", "自動車税", "車の売却"]
-related: ["menkyo-jishu-hennou", "souzoku-kuruma-meigi", "oya-ninchisho-shisan-touketsu"]
+related: ["oya-kuruma-baikyaku-trouble", "menkyo-jishu-hennou", "souzoku-kuruma-meigi", "oya-ninchisho-shisan-touketsu"]
 ---
 
 親が運転をやめると、残った車をどうするかが問題になります。乗らない車にも、自動車税や保険、駐車場代がかかり続けます。ここでは、親の車を手放すときの選択肢と、手続きで気をつけたいことを整理します。
@@ -72,6 +72,9 @@ related: ["menkyo-jishu-hennou", "souzoku-kuruma-meigi", "oya-ninchisho-shisan-t
 
 - [親の運転免許の自主返納｜運転経歴証明書と返納特典](/blog/menkyo-jishu-hennou)
 - [親の通院の付き添いができないときは？](/blog/tsuin-tsukisoi)
+
+
+> 車を**売る**ときは、買取のトラブルにも気をつけましょう。車の売却はクーリング・オフの対象外です。防ぎ方は[親の車を売る前に知っておきたい買取トラブル](/blog/oya-kuruma-baikyaku-trouble)にまとめています。
 
 ## まとめ
 
