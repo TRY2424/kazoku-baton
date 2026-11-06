@@ -3,7 +3,7 @@ title: "運転経歴証明書は身分証になる？｜一生使える・住所
 eyecatchTitle: "運転経歴証明書は身分証になる？"
 eyecatchSub: "住所変更・再交付と本人確認の変化"
 date: "2026-10-18"
-updated: "2026-10-30"
+updated: "2026-11-07"
 icon: "kuruma"
 categories: ["oya-kuruma"]
 description: "免許を返納した親が受け取る運転経歴証明書は、大阪府警察の案内で「公的な身分証明書として生涯使える」とされています。住所や氏名が変わったときの手続き（無料）、なくしたときの再交付（1,150円）、平成24年3月以前の旧様式の切替え、2027年4月施行の犯罪収益移転防止法施行規則の改正でICチップのない本人確認書類の扱いが変わる点を整理しました。"
@@ -31,6 +31,12 @@ related: ["menkyo-jishu-hennou", "henno-go-idou", "koureisha-unten-toukei"]
 ただし、違反などで免許を取り消された人は、運転経歴証明書を受け取れません。また、申請できるのは、**返納または失効から5年以内**で、まだ申請したことがない人です。
 
 → [親の運転免許の自主返納｜運転経歴証明書と返納特典](/blog/menkyo-jishu-hennou)
+
+## 銀行などの本人確認でも使える？
+
+警察庁の資料では、運転経歴証明書は、**金融機関の窓口などで、犯罪収益移転防止法の本人確認書類として使える**と説明されています（平成24年4月施行の規則改正から）。
+
+ただし、本人確認のしかたは変わりつつあります（下の「2027年4月から」の項目を見てください）。インターネットでの手続きや、お店ごとの扱いはちがうことがあるので、**使う予定の銀行やお店に確認**すると確実です。
 
 ## 住所や名前が変わったら、変更の手続きを
 
@@ -98,6 +104,9 @@ related: ["menkyo-jishu-hennou", "henno-go-idou", "koureisha-unten-toukei"]
 - マイナンバーカードを持っているなら、マイナ経歴証明書も選べる
 
 ## この記事の出典
+
+- 警察庁「[運転免許証の自主返納と運転経歴証明書](https://www.npa.go.jp/policies/application/license_renewal/pdf/rhd_slide_v2.pdf)」
+- 警察庁「[第2項 高齢運転者の交通事故防止対策の推進](https://www.npa.go.jp/hakusyo/h30/honbun/html/u5320000.html)」（平成30年警察白書）
 
 - 大阪府警察「[自主返納と同時に運転経歴証明書等を申請される方](https://www.police.pref.osaka.lg.jp/tetsuduki/untenmenkyo/keireki/3693.html)」
 - 大阪府警察「[運転免許証等がすでに失効した方（すでに返納した方）の運転経歴証明書等の申請](https://www.police.pref.osaka.lg.jp/tetsuduki/untenmenkyo/keireki/11288.html)」
