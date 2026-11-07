@@ -18,7 +18,8 @@ export default function Home({ categories, posts }) {
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "関西 家族のバトン",
-          url: "https://www.kazoku-baton.net",
+          alternateName: ["家族のバトン", "Kazoku Baton"],
+          url: "https://www.kazoku-baton.net/",
           inLanguage: "ja",
         }}
       />
