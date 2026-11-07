@@ -195,3 +195,15 @@ button:focus-visible {
 .prevnext-card:hover { background: #fff; }
 .prevnext-label { font-size: 0.75rem; color: #C1694F; }
 .prevnext-title { font-family: "Noto Serif JP", serif; font-size: 0.9rem; color: #3F5D52; line-height: 1.5; }
+
+/* 近い内容の記事（アイキャッチつき） */
+.related-box { border-top: 1px solid rgba(63, 93, 82, 0.2); padding-top: 1.75rem; }
+.related-title { font-family: "Noto Serif JP", serif; font-size: 1.15rem; color: #3F5D52; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.related-title::before { content: ""; width: 1.4rem; height: 2px; background: #C1694F; }
+.related-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; list-style: none; padding: 0; margin: 0; }
+@media (min-width: 640px) { .related-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; } }
+.related-card { display: block; height: 100%; text-decoration: none; background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(63, 93, 82, 0.15); border-radius: 10px; overflow: hidden; transition: background 0.15s, transform 0.15s; }
+.related-card:hover { background: #fff; transform: translateY(-2px); }
+.related-img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; }
+.related-card-title { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin: 0.6rem 0.75rem 0.8rem; font-family: "Noto Serif JP", serif; font-size: 0.82rem; line-height: 1.55; color: #3F5D52; }
+.related-card:hover .related-card-title { color: #C1694F; }

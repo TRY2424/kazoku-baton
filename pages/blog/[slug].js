@@ -4,7 +4,7 @@ import AffiliateCTA from "@/components/AffiliateCTA";
 import AdSlot from "@/components/AdSlot";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getAllSlugs, getEntryBySlug, getRelatedPosts, renderMarkdown, addToc, getPrevNext } from "@/lib/content";
-import { Conclusion, Toc, TagList, PrevNext } from "@/components/ArticleParts";
+import { Conclusion, Toc, TagList, PrevNext, RelatedGrid } from "@/components/ArticleParts";
 import { getBlogIcon } from "@/lib/icons";
 import { AFFILIATE_LINKS } from "@/lib/affiliates";
 import GenreLabel from "@/components/GenreLabel";
@@ -100,6 +100,7 @@ export default function BlogPost({ post, contentHtml, related, toc, prevNext }) 
         ))}
 
         <TagList tags={post.tags} />
+        <RelatedGrid items={related} />
         <PrevNext {...prevNext} />
 
         <AdSlot />
@@ -115,41 +116,6 @@ export default function BlogPost({ post, contentHtml, related, toc, prevNext }) 
           />
         )}
 
-        {related.length > 0 && (
-          <section className="mt-16 pt-10 border-t hairline">
-            <h2 className="font-serif text-2xl text-pine mb-6">あわせて読みたい</h2>
-            <ul className="grid gap-4 sm:grid-cols-3">
-              {related.map((item) => {
-                return (
-                  <li key={item.slug}>
-                    <Link
-                      href={`/blog/${item.slug}`}
-                      className="block h-full border hairline bg-white/60 hover:bg-white p-5 transition-colors group"
-                    >
-                      <img
-                        src={`/images/eyecatch/${item.slug}.png`}
-                        alt=""
-                        width={1200}
-                        height={630}
-                        loading="lazy"
-                        className="w-full h-auto rounded-lg mb-3"
-                      />
-                      <div className="mb-2">
-                        <GenreLabel post={item} />
-                      </div>
-                      <h3 className="font-serif text-base text-pine group-hover:text-terracotta transition-colors leading-snug">
-                        {item.title}
-                      </h3>
-                      {item.summary && (
-                        <p className="text-xs text-ink/60 font-sans mt-2 leading-relaxed">{item.summary}</p>
-                      )}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-        )}
       </article>
     </>
   );
@@ -167,7 +133,7 @@ export async function getStaticProps({ params }) {
   const post = getEntryBySlug("blog", params.slug);
   const { html: contentHtml, toc } = addToc(await renderMarkdown(post.content));
   const { content, ...postMeta } = post;
-  const related = getRelatedPosts(post);
+  const related = getRelatedPosts(post, 6);
   const prevNext = getPrevNext(post);
   return { props: { post: postMeta, contentHtml, related, toc, prevNext } };
 }

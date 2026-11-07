@@ -65,3 +65,30 @@ export function PrevNext({ newer, older }) {
     </nav>
   );
 }
+
+/** 記事の下の「近い内容の記事」（アイキャッチつき） */
+export function RelatedGrid({ items }) {
+  if (!items || items.length === 0) return null;
+  return (
+    <section className="related-box mt-12" aria-label="近い内容の記事">
+      <p className="related-title">近い内容の記事</p>
+      <ul className="related-grid">
+        {items.map((item) => (
+          <li key={item.slug}>
+            <Link href={`/blog/${item.slug}`} className="related-card">
+              <img
+                src={`/images/eyecatch/${item.slug}.png`}
+                alt=""
+                width={1200}
+                height={630}
+                loading="lazy"
+                className="related-img"
+              />
+              <span className="related-card-title">{item.title}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
