@@ -1,7 +1,7 @@
 ---
 title: "75歳以上の免許更新｜認知機能検査・運転技能検査・高齢者講習と、サポカー限定免許"
 date: "2026-10-18"
-updated: "2026-10-23"
+updated: "2026-11-08"
 icon: "kuruma"
 categories: ["oya-kuruma"]
 description: "70歳以上の高齢者講習、75歳以上の認知機能検査、一定の違反歴がある人の運転技能検査（実車の検査）、2022年5月に始まったサポカー限定免許、家族が相談できる#8080まで、親の免許更新で知っておきたいことを警察庁の情報で整理しました。"
@@ -81,6 +81,8 @@ related: ["menkyo-jishu-hennou", "oya-kuruma-tebanasu", "ninchisho-yukuefumei-mi
 ## 免許を返すと決めたら
 
 返納の手続きや、返納したあとに受け取れる「運転経歴証明書」、関西2府4県の返納特典は、[親の運転免許の自主返納](/blog/menkyo-jishu-hennou)でくわしく紹介しています。
+
+> **くわしく**：[認知機能検査は何をする？何点で合格？](/blog/ninchi-kinou-kensa)、[運転技能検査とは？](/blog/unten-ginou-kensa)、高齢者講習の空き状況は[大阪](/blog/koureisha-koushuu-yoyaku)・[兵庫](/blog/koureisha-koushuu-hyogo)・[京都](/blog/kyoto-koureisha-koushuu)・[奈良](/blog/nara-koureisha-koushuu)。
 
 ## まとめ
 
