@@ -3,7 +3,8 @@ import Seo from "@/components/Seo";
 import AffiliateCTA from "@/components/AffiliateCTA";
 import AdSlot from "@/components/AdSlot";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { getAllSlugs, getEntryBySlug, getRelatedPosts, renderMarkdown } from "@/lib/content";
+import { getAllSlugs, getEntryBySlug, getRelatedPosts, renderMarkdown, addToc, getPrevNext } from "@/lib/content";
+import { Conclusion, Toc, TagList, PrevNext } from "@/components/ArticleParts";
 import { getBlogIcon } from "@/lib/icons";
 import { AFFILIATE_LINKS } from "@/lib/affiliates";
 import GenreLabel from "@/components/GenreLabel";
@@ -17,7 +18,7 @@ const proseClass = `prose-custom max-w-none font-sans text-ink/90 leading-loose
   [&_blockquote]:border-l-4 [&_blockquote]:border-terracotta/40 [&_blockquote]:pl-4 [&_blockquote]:text-ink/70
   [&_hr]:my-10 [&_hr]:border-t [&_hr]:hairline`;
 
-export default function BlogPost({ post, contentHtml, related }) {
+export default function BlogPost({ post, contentHtml, related, toc, prevNext }) {
   const Icon = getBlogIcon(post.icon);
   // frontmatter に cta(affiliate または href)がある記事だけ、記事専用のPR枠を出す。
   // 本文中の <!-- cta --> の位置にも同じPR枠を差し込む。
@@ -81,6 +82,9 @@ export default function BlogPost({ post, contentHtml, related }) {
           className="w-full h-auto rounded-2xl mb-10"
         />
 
+        <Conclusion text={post.conclusion || post.summary} />
+        <Toc items={toc} />
+
         {/* ステマ規制のため、小さくしすぎたり薄くしすぎたりしないこと */}
         {hasCta && (
           <p className="text-xs text-ink/60 font-sans text-right -mt-6 mb-8">
@@ -94,6 +98,9 @@ export default function BlogPost({ post, contentHtml, related }) {
             {hasCta && i < contentParts.length - 1 && <AffiliateCTA {...cta} show />}
           </div>
         ))}
+
+        <TagList tags={post.tags} />
+        <PrevNext {...prevNext} />
 
         <AdSlot />
 
@@ -158,8 +165,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = getEntryBySlug("blog", params.slug);
-  const contentHtml = await renderMarkdown(post.content);
+  const { html: contentHtml, toc } = addToc(await renderMarkdown(post.content));
   const { content, ...postMeta } = post;
   const related = getRelatedPosts(post);
-  return { props: { post: postMeta, contentHtml, related } };
+  const prevNext = getPrevNext(post);
+  return { props: { post: postMeta, contentHtml, related, toc, prevNext } };
 }
