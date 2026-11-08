@@ -146,6 +146,8 @@ related: ["koureisha-menkyo-koushin", "koureisha-unten-toukei", "menkyo-jishu-he
 
 > **返納したら、親の車はどうする？**　乗らなくなった車にも、自動車税や保険がかかり続けます。売る・譲る・廃車の選び方は[親の車を手放すときの手続き](/blog/oya-kuruma-tebanasu)、売るときのトラブルの防ぎ方は[親の車を売る前に知っておきたい買取トラブル](/blog/oya-kuruma-baikyaku-trouble)にまとめています。
 
+> **門真・光明池の試験場で受けるなら**：受講後にそのまま更新できる点や、アクセス・駐車場は[門真・光明池の試験場で高齢者講習を受けるには？](/blog/kadoma-koumyouike-koureisha-koushuu)にまとめています。
+
 > **ほかの府県の空き状況**：[兵庫県](/blog/koureisha-koushuu-hyogo)・[京都府](/blog/kyoto-koureisha-koushuu)・[奈良県](/blog/nara-koureisha-koushuu)もまとめています。認知機能検査の中身は[認知機能検査は何をする？](/blog/ninchi-kinou-kensa)、運転技能検査は[運転技能検査とは？](/blog/unten-ginou-kensa)をご覧ください。
 
 ## よくある質問
