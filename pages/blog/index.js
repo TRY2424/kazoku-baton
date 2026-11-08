@@ -95,6 +95,7 @@ export default function BlogIndex({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllEntries("blog").map(({ content, ...rest }) => rest);
+  // 一覧に必要な項目だけ渡す（ページのデータを軽くするため）
+  const posts = getAllEntries("blog").map((p) => ({ slug: p.slug, title: p.title, date: p.date, summary: p.summary || null, icon: p.icon || null, categories: p.categories || [] }));
   return { props: { posts } };
 }
