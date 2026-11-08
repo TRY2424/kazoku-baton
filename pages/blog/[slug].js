@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Seo from "@/components/Seo";
-import AffiliateCTA from "@/components/AffiliateCTA";
+import AffiliateCTA, { PR_ENABLED } from "@/components/AffiliateCTA";
 import AdSlot from "@/components/AdSlot";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getAllSlugs, getEntryBySlug, getRelatedPosts, renderMarkdown, addToc, getPrevNext } from "@/lib/content";
@@ -29,7 +29,7 @@ export default function BlogPost({ post, contentHtml, related, toc, prevNext }) 
     buttonLabel: post.cta.buttonLabel,
     href: affiliate?.href || post.cta.href,
   };
-  const hasCta = Boolean(cta?.href && cta.href !== "#");
+  const hasCta = PR_ENABLED && Boolean(cta?.href && cta.href !== "#");
   const contentParts = hasCta
     ? contentHtml.split("<!-- cta -->")
     : [contentHtml.replaceAll("<!-- cta -->", "")];

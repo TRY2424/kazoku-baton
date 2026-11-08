@@ -8,6 +8,10 @@ import { ArrowRight } from "lucide-react";
 // PR枠の表示スイッチ。再表示するときは true に戻してください。
 const SHOW_AFFILIATE_CTA = false;
 
+// PR枠の全体スイッチ（AdSense審査中は false）。false のあいだは、記事で cta を指定していても PR枠と「PRが含まれています」の表記を出さない。
+// 承認後に true に戻す。
+export const PR_ENABLED = false;
+
 export default function AffiliateCTA({
   title,
   description,
@@ -16,7 +20,7 @@ export default function AffiliateCTA({
   pixel,
   show = SHOW_AFFILIATE_CTA,
 }) {
-  if (!show) return null;
+  if (!PR_ENABLED || !show) return null;
 
   return (
     <div className="my-10 border-2 border-terracotta bg-white p-6">
