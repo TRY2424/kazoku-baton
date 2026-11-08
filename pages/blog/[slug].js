@@ -18,7 +18,7 @@ const proseClass = `prose-custom max-w-none font-sans text-ink/90 leading-loose
   [&_blockquote]:border-l-4 [&_blockquote]:border-terracotta/40 [&_blockquote]:pl-4 [&_blockquote]:text-ink/70
   [&_hr]:my-10 [&_hr]:border-t [&_hr]:hairline`;
 
-export default function BlogPost({ post, contentHtml, related, toc, prevNext }) {
+export default function BlogPost({ post, contentHtml, sourceHtml, related, toc, prevNext }) {
   const Icon = getBlogIcon(post.icon);
   // frontmatter に cta(affiliate または href)がある記事だけ、記事専用のPR枠を出す。
   // 本文中の <!-- cta --> の位置にも同じPR枠を差し込む。
@@ -103,6 +103,9 @@ export default function BlogPost({ post, contentHtml, related, toc, prevNext }) 
         <RelatedGrid items={related} />
         <PrevNext {...prevNext} />
 
+        {/* 出典は関連記事の下に置く（読み終えた人を先に関連記事へ案内するため） */}
+        {sourceHtml && <div className={`${proseClass} mt-12`} dangerouslySetInnerHTML={{ __html: sourceHtml }} />}
+
         <AdSlot />
 
         {hasCta ? (
@@ -131,9 +134,13 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = getEntryBySlug("blog", params.slug);
-  const { html: contentHtml, toc } = addToc(await renderMarkdown(post.content));
+  const { html: fullHtml, toc } = addToc(await renderMarkdown(post.content));
+  // 本文末尾の「出典」見出し以降は、関連記事の下に表示する
+  const srcAt = fullHtml.indexOf("<h2 class=\"h2-source\"");
+  const contentHtml = srcAt >= 0 ? fullHtml.slice(0, srcAt) : fullHtml;
+  const sourceHtml = srcAt >= 0 ? fullHtml.slice(srcAt) : null;
   const { content, ...postMeta } = post;
   const related = getRelatedPosts(post, 6);
   const prevNext = getPrevNext(post);
-  return { props: { post: postMeta, contentHtml, related, toc, prevNext } };
+  return { props: { post: postMeta, contentHtml, sourceHtml, related, toc, prevNext } };
 }
