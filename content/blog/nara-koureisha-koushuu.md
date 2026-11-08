@@ -82,6 +82,8 @@ related: ["kyoto-koureisha-koushuu", "koureisha-koushuu-yoyaku", "ninchi-kinou-k
 
 京都府は[京都府の高齢者講習の空き状況](/blog/kyoto-koureisha-koushuu)、大阪府は[高齢者講習の空き状況（大阪）](/blog/koureisha-koushuu-yoyaku)、認知機能検査の中身は[認知機能検査は何をする？](/blog/ninchi-kinou-kensa)にまとめています。
 
+> 滋賀県・和歌山県の高齢者講習は[滋賀県](/blog/shiga-koureisha-koushuu)・[和歌山県](/blog/wakayama-koureisha-koushuu)にまとめています。
+
 ## この記事の出典
 
 - 奈良県警察「[高齢者講習・認知機能検査・運転技能検査](https://www.police.pref.nara.jp/0000006917.html)」（2026年10月9日掲載、施設情報は2026年9月末現在）

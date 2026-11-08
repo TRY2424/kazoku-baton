@@ -86,6 +86,8 @@ related: ["koureisha-koushuu-yoyaku", "koureisha-koushuu-hyogo", "ninchi-kinou-k
 
 大阪府は[高齢者講習の空き状況（大阪）](/blog/koureisha-koushuu-yoyaku)、兵庫県は[兵庫県の高齢者講習の空き状況](/blog/koureisha-koushuu-hyogo)、認知機能検査の中身は[認知機能検査は何をする？](/blog/ninchi-kinou-kensa)にまとめています。
 
+> 滋賀県・和歌山県の高齢者講習は[滋賀県](/blog/shiga-koureisha-koushuu)・[和歌山県](/blog/wakayama-koureisha-koushuu)にまとめています。
+
 ## この記事の出典
 
 - 京都府警察「[高齢者講習制度](https://www.pref.kyoto.jp/fukei/menkyo/m_koshu/koreisha/index2022.html)」（2026年11月2日更新）
