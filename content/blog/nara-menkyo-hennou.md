@@ -58,6 +58,8 @@ related: ["kyoto-menkyo-hennou", "nara-koureisha-koushuu", "keireki-shoumeisho-m
 
 奈良県の高齢者講習の待ち時間は[奈良県の高齢者講習の空き状況](/blog/nara-koureisha-koushuu)、京都府の返納は[免許返納の手続き【京都府】](/blog/kyoto-menkyo-hennou)、大阪府は[免許返納の手続き【大阪府】](/blog/menkyo-jishu-hennou)にまとめています。
 
+> **返納したあとの移動手段**：奈良市の「ななまるカード」（70歳以上・市内バス1乗車100円）や返納者へのバスチャージ券は、[免許を返納した親の移動手段](/blog/henno-go-idou)にまとめています。
+
 ## この記事の出典
 
 - 奈良県警察「[運転免許自主返納（申請取消）について](https://www.police.pref.nara.jp/0000006457.html)」（2026年4月1日更新）

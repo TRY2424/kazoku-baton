@@ -73,6 +73,8 @@ A. 行政処分（取消し・停止）の対象になっている人は、自�
 
 運転経歴証明書を身分証として使うときの注意は[運転経歴証明書は身分証明書になる？](/blog/keireki-shoumeisho-mibun)、和歌山県の高齢者講習は[和歌山県の高齢者講習の予約](/blog/wakayama-koureisha-koushuu)にまとめています。
 
+> **返納したあとの移動手段**：和歌山市の「元気70パス」（70歳以上・市内バス1乗車100円）は、[免許を返納した親の移動手段](/blog/henno-go-idou)にまとめています。
+
 ## この記事の出典
 
 - 和歌山県警察「[運転免許の自主返納（申請取消）](https://www.police.pref.wakayama.lg.jp/02_koutsu/driverslicense/hennou/index.html)」
