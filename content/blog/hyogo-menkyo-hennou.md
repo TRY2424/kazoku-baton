@@ -74,6 +74,15 @@ related: ["menkyo-jishu-hennou", "keireki-shoumeisho-mibun", "koureisha-koushuu-
 
 兵庫県内に住所がある65歳以上の人は、運転経歴証明書を見せると、「高齢者運転免許自主返納サポート協議会」に加わる企業などの特典を受けられます。西宮市・芦屋市の支援は、姉妹サイトの[西宮市で親が運転免許を返納したら](https://www.nishi-ashi-kurashi.com/blog/menkyo-hennou-chuushajou)にまとめています。
 
+
+| 種類 | 内容（兵庫県警の一覧より。令和8年11月1日現在） |
+|---|---|
+| 路線バス | 神姫バス、神姫ゾーンバス、ウイング神姫、全但バス、淡路交通、阪神バスの6社が、路線バスの運賃を**半額**に（現金で乗るときに限る。高速バスなど対象外のものがある会社も） |
+| タクシー | 加盟しているタクシー会社の運賃が**1割引** |
+| お店・施設など | 自転車店、クリーニング、酒蔵の施設、宿泊施設など、県内各地の店や施設が載っている（西宮市ではフレンテ西宮など） |
+
+加盟しているのは、企業・団体278と自治体41の、あわせて**319**です（令和8年11月1日現在）。お店ごとの特典の内容や条件は、兵庫県警の一覧（PDF）で確認し、利用する前に確かめてください。
+
 ## まとめ
 
 - 兵庫県は、更新センター（即日）か警察署（約15日）で返納
@@ -87,6 +96,7 @@ related: ["menkyo-jishu-hennou", "keireki-shoumeisho-mibun", "koureisha-koushuu-
 
 ## この記事の出典
 
+- 兵庫県警察「[運転経歴証明書を提示して受けられる特典の一覧](https://www.police.pref.hyogo.lg.jp/traffic/license/keireki_tokuten/index.htm)」（一覧PDFは令和8年11月1日現在、2026年11月9日に確認）
 - 兵庫県警察「[運転免許証の自主返納（申請による取消し）手続き](https://www.police.pref.hyogo.lg.jp/traffic/license/hennou/index.htm)」
 - 兵庫県警察「[運転経歴証明書申請手続き](https://www.police.pref.hyogo.lg.jp/traffic/license/keireki/index.htm)」
 
