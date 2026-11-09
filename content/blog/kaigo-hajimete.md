@@ -65,6 +65,8 @@ tags: ["介護", "はじめて"]
 
 高齢者施設や介護サービスについての詳しい情報は、[高齢者施設のページ](/categories/koreisha-shisetsu)、[介護サービスのページ](/categories/kaigo-service)もあわせてご覧ください。
 
+> **何歳から？**：年齢別の要介護認定の割合は[親の介護は何歳から？](/blog/oya-kaigo-nansai-kara)にまとめています。
+
 ## この記事の出典
 
 - 厚生労働省「[地域包括支援センターについて](https://www.mhlw.go.jp/content/12300000/001671185.pdf)」（設置数は2025年4月末現在）

@@ -90,6 +90,8 @@ related: ["koureisha-menkyo-koushin", "ninchisho-unten-menkyo", "koureisha-koush
 - 36点未満なら、医師の診断（臨時適性検査か診断書）へ
 - 検査は医師の診断のかわりではない
 
+> **イラストの一覧**：パターンA〜Dの16枚ずつのイラストとヒントは[認知機能検査のイラストパターン一覧](/blog/ninchi-kinou-kensa-illust)にまとめています。
+
 ## この記事の出典
 
 - 警察庁「[認知機能検査について](https://www.npa.go.jp/policies/application/license_renewal/ninchi.html)」

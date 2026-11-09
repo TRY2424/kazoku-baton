@@ -94,6 +94,8 @@ related: ["menkyo-jishu-hennou", "keireki-shoumeisho-mibun", "koureisha-koushuu-
 
 兵庫県の高齢者講習の空き状況は[兵庫県の高齢者講習の空き状況](/blog/koureisha-koushuu-hyogo)、返納したあとの車は[親の車を手放すときの手続き](/blog/oya-kuruma-tebanasu)にまとめています。
 
+> **神戸市に住んでいる場合**：神戸市のICOCAキャンペーン（終了）といまの特典は[神戸市で免許返納すると特典は？](/blog/kobe-menkyo-hennou)にまとめています。
+
 ## この記事の出典
 
 - 兵庫県警察「[運転経歴証明書を提示して受けられる特典の一覧](https://www.police.pref.hyogo.lg.jp/traffic/license/keireki_tokuten/index.htm)」（一覧PDFは令和8年11月1日現在、2026年11月9日に確認）
