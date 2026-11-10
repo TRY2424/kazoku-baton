@@ -21,10 +21,26 @@ const blogPaths = getSlugs("blog").map((s) => `/blog/${s}`);
 
 const allPaths = [...staticPaths, ...categoryPaths, ...blogPaths];
 
+// 各ページの更新日（frontmatter の updated、なければ date）を <lastmod> に入れる。
+// 一覧などのページは、サイト全体でいちばん新しい日付にする。
+function readDate(dir, slug) {
+  const f = path.join(process.cwd(), "content", dir, `${slug}.md`);
+  if (!fs.existsSync(f)) return null;
+  const fm = (fs.readFileSync(f, "utf-8").split(/^---\s*$/m)[1]) || "";
+  const pick = (k) => { const m = fm.match(new RegExp("^" + k + ":\\s*\"?([0-9]{4}-[0-9]{2}-[0-9]{2})", "m")); return m ? m[1] : null; };
+  return pick("updated") || pick("date");
+}
+function lastmodFor(p) {
+  const m = p.match(/^\/([a-z]+)\/(.+)$/);
+  return m ? readDate(m[1], m[2]) : null;
+}
+
+const __all = (typeof allPaths !== 'undefined' ? allPaths : paths);
+const __latest = __all.map(lastmodFor).filter(Boolean).sort().at(-1);
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPaths
-  .map((p) => `  <url><loc>${SITE_URL}${p}</loc></url>`)
+  .map((p) => `  <url><loc>${SITE_URL}${p}</loc>${(lastmodFor(p) || __latest) ? `<lastmod>${lastmodFor(p) || __latest}</lastmod>` : ""}</url>`)
   .join("\n")}
 </urlset>
 `;

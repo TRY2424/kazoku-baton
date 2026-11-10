@@ -50,9 +50,12 @@ export default function BlogPost({ post, contentHtml, sourceHtml, related, toc, 
           dateModified: post.updated || post.date,
           image: `https://www.kazoku-baton.net/images/eyecatch/${post.slug}.png`,
           inLanguage: "ja",
+          author: { "@type": "Person", name: "夏之助", url: "https://www.kazoku-baton.net/about" },
           publisher: {
             "@type": "Organization",
             name: "関西 家族のバトン",
+            url: "https://www.kazoku-baton.net",
+            logo: { "@type": "ImageObject", url: "https://www.kazoku-baton.net/icon-512.png" },
           },
         }}
       />
