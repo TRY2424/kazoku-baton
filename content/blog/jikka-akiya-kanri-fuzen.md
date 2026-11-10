@@ -71,6 +71,8 @@ related: ["akiya-3000man-koujo", "fudousan-baikyaku-guide", "souzoku-touki-hiyou
 
 西宮市・芦屋市の空き家の相談先は、姉妹サイトの[西宮市・芦屋市の空き家の相談先](https://www.nishi-ashi-kurashi.com/blog/nishinomiya-ashiya-akiya-soudan)にまとめています。
 
+> **西宮市に実家がある場合**：市の無料の空き家相談（毎月第3金曜）や、シルバー人材センターの見守り・点検は、西宮・芦屋くらしガイドの[空き家を放置するとどうなる？西宮市の対策と相談窓口](https://www.nishi-ashi-kurashi.com/blog/akiya-taisaku-hou)にまとめています。
+
 ## この記事の出典
 
 - 国土交通省「[「空家法」と「2023改正空家法」](https://www.mlit.go.jp/jutakukentiku/house/content/001753652.pdf)」（PDF）
