@@ -8,7 +8,7 @@ import AffiliateCTA from "@/components/AffiliateCTA";
 import { getAllEntries } from "@/lib/content";
 import { Heart, NotebookText } from "lucide-react";
 
-export default function Home({ categories, posts }) {
+export default function Home({ categories, posts, popular = [] }) {
   return (
     <>
       <Seo
@@ -106,6 +106,23 @@ export default function Home({ categories, posts }) {
             ))}
           </ul>
         </section>
+
+        {/* よく読まれている記事 */}
+        {popular.length > 0 && (
+          <section className="pb-16">
+            <h2 className="font-serif text-2xl text-pine mb-6">よく読まれている記事</h2>
+            <ol className="grid gap-3 sm:grid-cols-2 list-decimal pl-5 font-sans">
+              {popular.map((p) => (
+                <li key={p.slug} className="leading-snug">
+                  <Link href={`/blog/${p.slug}`} className="text-pine hover:text-terracotta underline-offset-2 hover:underline">
+                    {p.title.split("｜")[0]}
+                  </Link>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
       </div>
     </>
   );
@@ -115,7 +132,11 @@ export async function getStaticProps() {
   const categories = getAllEntries("categories").map(({ content, ...rest }) => rest);
   const posts = getAllEntries("blog")
     .map(({ content, ...rest }) => rest)
-    .slice(0, 5);
+    .slice(0, 12);
+  // よく読まれている記事（Search Console で表示の多い記事。ときどき見直す）
+  const POPULAR = ["koureisha-koushuu-yoyaku","menkyo-jishu-hennou","keireki-shoumeisho-mibun","koureisha-koushuu-hyogo","oya-unten-shinpai","kaigo-tsukare","ninchi-kinou-kensa-illust","henno-go-idou"];
+  const all = getAllEntries("blog");
+  const popular = POPULAR.map((slug) => all.find((p) => p.slug === slug)).filter(Boolean).map((p) => ({ slug: p.slug, title: p.title }));
 
-  return { props: { categories, posts } };
+  return { props: { categories, posts, popular } };
 }
