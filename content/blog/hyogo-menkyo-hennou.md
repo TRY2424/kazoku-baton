@@ -11,7 +11,7 @@ tags: ["免許返納", "兵庫県", "運転経歴証明書", "高齢ドライバ
 related: ["menkyo-jishu-hennou", "keireki-shoumeisho-mibun", "koureisha-koushuu-hyogo"]
 ---
 
-親が運転をやめると決めたら、次は**運転免許の自主返納**です。兵庫県で返納するときの場所や持ち物、代理人・郵送の手続きを、兵庫県警察の公式ページで整理しました（出典は記事の最後に載せています）。大阪府の場合は[免許返納の手続き【大阪府】](/blog/menkyo-jishu-hennou)にまとめています。
+親が運転をやめると決めたら、次は**運転免許の自主返納**です。兵庫県で返納するときの場所や持ち物、代理人・郵送の手続きを、兵庫県警察の公式ページで整理しました（出典は記事の最後に載せています）。大阪府の場合は[免許返納の手続き【大阪府】](/blog/menkyo-jishu-hennou)にまとめています。返納したあとのバスの割引は、[西宮市の高齢者バス運賃助成](https://www.nishi-ashi-kurashi.com/blog/nishinomiya-koureisha-bus-josei)と[芦屋市の高齢者バス運賃助成](https://www.nishi-ashi-kurashi.com/blog/ashiya-koureisha-bus-josei)をご覧ください。
 
 ## どこで返納できる？
 

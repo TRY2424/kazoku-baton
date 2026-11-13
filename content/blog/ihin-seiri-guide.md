@@ -92,6 +92,8 @@ related: ["ihin-gyousha-erabi", "ihin-hiyou-osaeru", "ihin-chintai-taikyo"]
 | 貴重品や書類が見つかったときの扱いを説明してくれるか | 大切なものを誤って処分しないため |
 | 複数社で見積もりを比べたか | 費用や対応の差が大きいため |
 
+実家が西宮市・芦屋市にあって、家具などを自分たちで処分するときは、[西宮市の粗大ごみの出し方](https://www.nishi-ashi-kurashi.com/blog/nishinomiya-sodaigomi)・[芦屋市の粗大ごみの出し方](https://www.nishi-ashi-kurashi.com/blog/ashiya-sodaigomi)も参考にしてください。
+
 ## まとめ
 
 - 遺品整理に法律上の期限はないが、賃貸や相続の手続きとの関係で時期を考える
